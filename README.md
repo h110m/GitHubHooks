@@ -12,6 +12,18 @@ npm i githubhooks
 ```
 <br />
 
+## Autocompletion
+
+Thanks to the typescript declarations and code comments auto completion looks something like this:
+
+![GitHubHooks](https://user-images.githubusercontent.com/50122507/139356094-be98b545-cefa-4031-9bed-022a3eb798d5.gif)
+
+All events are beeing dispayed together with a description that feature a table with type declarations.
+As soon as you change the name of the event and hover over the "on" word the corresponding infos are shown.
+The response object (rsp) was defined as precisely as possible so you have the best possible overview.
+
+<br />
+
 ## Usage
 
 ```js
