@@ -56,9 +56,9 @@ The event names and response object parameters (rsp payload) are as descriped in
 <br />
 <br />
 
-## Buy me a coffe
+## Buy me a coffee
 
-I spent a lot of time on this package especally on the typescript part. So if you want to support my work, so i can keep making such cool things, you can [buy me a coffe](https://www.paypal.me/x32Vegas)
+I spent a lot of time on this package especally on the typescript part. So if you want to support my work, so i can keep making such cool things, you can [buy me a coffee](https://www.paypal.me/x32Vegas)
 
 <br />
 
