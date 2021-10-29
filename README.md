@@ -1,6 +1,6 @@
 # GitHubHooks
 
-> A Package to help with github webhooks | Also has really good ts support
+> A dependencie-free node js package to help with github webhooks | Also has really good ts support
 > <br />
 
 <br />
