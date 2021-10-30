@@ -31,6 +31,15 @@ You can also use the handler method as described below in the [express](#express
 
 <br />
 
+### Prerequisite
+
+Of course, the first thing to do is to create a github webhook. To create a new webhook just navigate to the settings of your repo, click on Webhooks and Add webhook. When creating it does not matter which content type you choose. It is only important that you enter the correct payload url for your server and, if necessary, a secret that you can later put into the constructor as the webhookSecret parameter. If you want to use https (SSL) you also have to put the content of your key and cert files into the constructor. Make sure you select the events you want to have. By default, only the `push` event is selected. Your finished webhook should look like this:
+
+![image](https://user-images.githubusercontent.com/50122507/139538042-c5c37e95-6dc2-4f7c-9705-dc5273504c28.png)
+
+<br />
+
+
 ### Standart usage
 
 ```js
