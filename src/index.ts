@@ -1910,14 +1910,18 @@ export class GitHubHooks extends EventEmitter {
         .on('end', () => res(data));
     });
 
-  private handler = async (req: httpServer.IncomingMessage, res: httpServer.ServerResponse) => {
+  handler = async (req: httpServer.IncomingMessage, res: httpServer.ServerResponse) => {
     var rawBody = await this.bodyReader(req);
     if (rawBody === false) return res.writeHead(413).end();
     var headers = req.headers;
 
     if (req.method !== 'POST') return res.writeHead(405).end();
 
-    if (!headers['content-type'] || headers['content-type'] !== 'application/x-www-form-urlencoded')
+    if (
+      !headers['content-type'] ||
+      (headers['content-type'] !== 'application/x-www-form-urlencoded' &&
+        headers['content-type'] !== 'application/json')
+    )
       return res.writeHead(400).end();
 
     if (
@@ -1936,7 +1940,11 @@ export class GitHubHooks extends EventEmitter {
     var body = {};
 
     try {
-      body = JSON.parse(decodeURIComponent(rawBody).substring('payload='.length));
+      body = JSON.parse(
+        headers['content-type'] === 'application/json'
+          ? rawBody
+          : decodeURIComponent(rawBody).substring('payload='.length),
+      );
     } catch (error) {
       return res.writeHead(400);
     }
