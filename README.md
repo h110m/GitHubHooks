@@ -1,6 +1,6 @@
 # GitHubHooks
 
-> A dependency-free node js package to help with GitHub webhooks | Also has really good ts support and works with [express](#express-usage) > <br />
+> A dependency-free node js package to help with GitHub webhooks | Also has really good ts support and works with [express](#express-usage) <br />
 
 <br />
 
